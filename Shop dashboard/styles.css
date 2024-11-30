@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: clamp(90%, 80%, 1200px); /* Adjust dynamically based on viewport */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Scales from 1.5rem to 2.5rem */
+}
+
+.input-section, .filters {
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: clamp(8px, 2vw, 10px); /* Dynamically sized padding */
+  font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive font size */
+}
+
+button {
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px); /* Adjusts padding */
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: skyblue;
+}
+
+thead th {
+  font-size: clamp(0.8rem, 1.2vw, 1rem); /* Dynamically adjusts font size */
+  font-weight: bold;
+}
+
+td, th {
+  padding: clamp(8px, 2vw, 10px);
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items if space is limited */
+  justify-content: space-between;
+  gap: 10px; /* Add space for wrapped items */
+  margin-bottom: 20px;
+}
+.tablecontent{
+  width: 80vw;
+  overflow-x: scroll;
+  margin: auto;
+}
+/* @media screen and (max-width:940px){
+  #productTable{
+    width: 10vw;
+    overflow: hidden;
+  }
+} */
