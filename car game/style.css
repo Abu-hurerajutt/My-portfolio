@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(4, 192, 4); /* Sky background */
+    overflow: hidden;
+}
+.roadsides{
+    width: 500px;
+    height: 100%;
+    background-color: rgb(216, 217, 218);
+    justify-content: space-around;
+    display: grid;
+    grid-column: 400px;
+    box-shadow: 5px 0px 10px rgb(46, 46, 46);
+}
+
+.road {
+    width: 400px;
+    height: 100%;
+    position: relative;
+    background-color: gray; /* Road background */
+    overflow: hidden;
+    box-shadow: 5px 0px 0px 5px 1px white;
+    z-index: 1;
+    box-shadow: 5px 0px 10px rgb(46, 46, 46) inset ;
+}
+#carmain{
+    height: 300px;
+    width: 160px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.road::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 200%; /* Make the height of the road marks twice the road height */
+    background: repeating-linear-gradient(
+        to bottom,
+        white 40px, /* White road marks */
+        transparent 80px /* Space between the marks */
+    );
+    animation: moveRoad 1s linear infinite;
+    
+}
+.roadstop::before{
+    animation-play-state: paused;
+}
+
+@keyframes moveRoad {
+    0% {
+        transform: translateY(-50%) ;
+    }
+    100% {
+        transform: translateY(0%) ; /* Move halfway up to loop smoothly */
+    }
+}
+#left{
+   border: none;
+   width: 70px;
+   height: 20px; 
+   border-radius: 20px;
+   position: absolute;
+   bottom: 20px;
+   left: 110px;
+}
+#right{
+    border: none;
+   width: 70px;
+   height: 20px; 
+   border-radius: 20px;
+   position: absolute;
+   bottom: 20px;
+   right: 110px;
+}
+.score{
+    position: absolute;
+    height: 150px;
+    width: 420px;
+    background-color: rgb(133, 4, 253);
+    right: 10px;
+    bottom: 40%;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 30px;
+    border: 2px solid black;
+}
+.score span{
+    background-color: white;
+    padding: 0 8px 0 8px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+#highscore{
+    position: absolute;
+    right: 10px;
+    bottom: 20%;
+    width: 420px;
+    height: 100px;
+    background-color: rgb(133, 4, 253) ;
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 20px;
+}
+#highscore span{
+    background-color: white;
+    padding: 0 8px 0 8px;
+    border: 2px solid black;
+}
+#hi{
+    margin-left: 55px;
+}
+#me{
+    margin-left: 50px;
+}
+.cars{
+    animation: movecars 15s linear infinite;
+     
+}
+#car1{
+    left: 30px;
+    top: -600px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+    
+}
+#car2{
+    right: 30px;
+    top: -1300px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+}
+
+#car3{
+    left: 30px;
+    top: -2000px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    
+}
+
+#car4{
+    right: 30px;
+    top: -2800px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+    
+}
+#car5{
+    right: 30px;
+    top: -5700px;
+    height: 400px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+}
+
+#car6{
+    left: 30px;
+    top: -4900px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(10px 0px 5px black);  
+}
+#car7{
+    right: 30px;
+    top: -6400px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+    
+}
+#car8{
+    left: 30px;
+    top: -7400px;
+    height: 400px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+}
+
+#car9{
+    right: 30px;
+    top: -7400px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    
+}
+
+#car10{
+    left: 30px;
+    top: -8200px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+    
+}
+#car11{
+    left: 30px;
+    top: -9000px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px black);  
+}
+
+#car12{
+    right: 30px;
+    top: -9600px;
+    height: 300px;
+    width: 150px;
+    position: absolute;
+    filter: drop-shadow(10px 0px 5px black);  
+}
+
+@keyframes movecars {
+    0% {
+        transform: translateY(0%) ;
+    }
+    100% {
+        transform: translateY(4000%) ; /* Move halfway up to loop smoothly */
+    }
+}
+.go{
+    filter: drop-shadow(0px 5px 10px black);
+}
+#gameover{
+    position: absolute;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(images/654d6a73d0d410.53058283.webp);
+    background-size: cover;
+    color: red;
+    padding: 100px;
+    z-index: 2;
+    display: none;
+    border: 5px solid black;
+    box-shadow: 10px 10px 20px black ;
+}
