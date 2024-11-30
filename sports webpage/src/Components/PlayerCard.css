@@ -1,0 +1,83 @@
+/* PlayerCard.css */
+.player-card {
+    padding: clamp(1rem, 2vw, 3rem);
+    background-color: white;
+    color: #333;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .player-card__title {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: bold;
+    margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  }
+  
+  .player-card__subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #ff6600;
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .player-card__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .player-card__info {
+    width: 50%;
+  }
+  
+  .player-card__number {
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: bold;
+    background-color: navy;
+    color: white;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    width: fit-content;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  }
+  
+  .player-card__name {
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: #ff6600;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  .player-card__description {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  .player-card__images {
+    display: flex;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    width:  40%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .player-card__image {
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  @media screen and (max-width:550px) {
+    .player-card__content{
+        display: grid ;
+        grid-template-columns: auto;
+    }
+    .player-card__images{
+        width: 100%;
+        display: flex;
+        
+    }
+    .player-card__image{
+        width: 50%;
+    }
+    .player-card__info{
+        width: 100%;
+    }
+  }

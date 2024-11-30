@@ -1,0 +1,111 @@
+
+  
+  .latest-results-container {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 5px;
+  }
+  
+  .match-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .match-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  
+  .team {
+    text-align: center;
+  }
+  
+  .team-logo-s {
+    width: clamp(100px,15vw,200px);
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .score {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .team-name {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 100px;
+    background-color: #ccc;
+  }
+  
+  .description {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .description p {
+    width: 45%;
+    color: #666;
+    line-height: 1.5;
+  }
+  .see-more-btn {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #fae903;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  /* The text stays on top */
+  .text {
+    position: relative;
+    z-index: 2; /* Keep text above the expanding bar */
+  }
+  
+  /* The expanding bar */
+  .bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; /* Default height */
+    background-color: #0c014b;
+    transition: height 0.3s ease;
+    z-index: 1; /* Place the bar below the text */
+  }
+  
+  /* Hover effect: Expand the bar */
+  .see-more-btn:hover .bar {
+    height: 100%; /* Full height on hover */
+  }
+  
+  /* Optional: Button hover color change */
+  .see-more-btn:hover {
+    background-color: #444;
+  }

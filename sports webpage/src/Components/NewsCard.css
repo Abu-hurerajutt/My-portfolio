@@ -1,0 +1,88 @@
+/* NewsCard.css */
+.news-container {
+    padding: clamp(1rem, 2vw, 3rem);
+    background-color: #e9e9f0;
+    text-align: center;
+  }
+  
+  .news-container__title {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: bold;
+    margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  }
+  
+  .news-container__subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #ff6600;
+    margin-bottom: clamp(2rem, 3vw, 3rem);
+  }
+  
+  .news-cards {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .news-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: clamp(250px, 30%, 350px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .news-card__content {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+  }
+  
+  .news-card__date {
+    text-align: center;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    background-color: #ff6600;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .news-card__day {
+    display: block;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bold;
+  }
+  
+  .news-card__month {
+    display: block;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  
+  .news-card__text {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .news-card__title {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+    font-weight: bold;
+  }
+  
+  .news-card__description {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #555;
+  }
+  

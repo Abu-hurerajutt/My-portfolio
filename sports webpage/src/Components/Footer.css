@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #ff6f00; /* Orange Button */
+    --secondary-color: #1c1c2d; /* Dark background */
+    --text-color: #ffffff; /* White text */
+  }
+  
+  .footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: clamp(1rem, 2vw, 2.5rem) clamp(1rem, 2vw, 3rem);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  
+  /* Left section with player image */
+  .footer-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .player-image img {
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  /* Right section with contact info and newsletter */
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .team-info {
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .team-name {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary-color);
+  }
+  
+  .address-title, .contact-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--primary-color);
+  }
+  
+  .team-info p {
+    margin: 0.5rem 0;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+  }
+  
+  /* Newsletter Section */
+  .newsletter h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  }
+  
+  .newsletter-input {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+  }
+  
+  .newsletter input {
+    padding: clamp(0.4rem, 1vw, 0.7rem);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    border-radius: 5px;
+    border: none;
+    flex: 1;
+  }
+  
+  .newsletter button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: clamp(0.4rem, 1vw, 0.7rem) clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Footer bottom text */
+  .footer-bottom {
+    text-align: center;
+    padding-top: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  
